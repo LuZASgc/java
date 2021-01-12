@@ -1,3 +1,9 @@
 Map
 ====
 Map是一个接口，map是映射的意思，也是键值对，键不允许重复。
+HashMap
+=======
+HashMap是Map接口的一个实现。
+##常用方法
+###keySet
+返回一个Set对象，为该HashMap对象多有键的集合。
