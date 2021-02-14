@@ -3,3 +3,7 @@
 ##2.1 [常用方法](Map.md#anchor_2)
 ###2.1.1 [keySet](Map.md#anchor_3)
 file: [Map.md](Map.md)
+#3 [小Tips](Tips.md#anchor_0)
+##3.1 [关于继承](Tips.md#anchor_1)
+##3.2 [自定义异常](Tips.md#anchor_2)
+file: [Tips.md](Tips.md)
