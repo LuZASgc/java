@@ -11,3 +11,19 @@
 super如果存在，那么一定要出现在构造方法的第一条语句。
 ##自定义异常
 Java中自定义的异常类（继承Exception）都是不可被忽略的异常。而系统实现的异常当中存在可以忽略的异常。
+##方法传递的参数
+方法传递的参数并非C++中的引用。
+```java
+public class Test {
+	public void change(String a){
+		a="123";
+	}
+	public static void main(String[]args){
+		String a="abc";
+		Test t = new Test();
+		t.change(a);
+		System.out.println(a);
+	}
+}
+```
+结果是： abc
