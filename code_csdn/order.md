@@ -2,3 +2,4 @@
 ##[Map.md](Map.md)
 ##[Tips.md](Tips.md)
 ##[IO.md](IO.md)
+##[内部类.md](内部类.md)
