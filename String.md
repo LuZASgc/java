@@ -84,7 +84,7 @@ String substring(beginIndex , endIndex)
 第一个substring的缺省endIndex就是字符串的长度，即截取到字符串结尾。  
 >注意，求子串的方法substring并不会对原字符串做出改变，它只是把子串作为返回值返回。
 
-##转换、替换、分割
+##字符串的替换、分割
 ###普通做法
 该部分功能的方法如：
 
@@ -102,3 +102,17 @@ String substring(beginIndex , endIndex)
 该方法的参数是一个支持正则表达式的字符串。
 ####其他
 replace的三个方法和split方法都支持真正表达式匹配串（分别对应旧串和定界符串）。
+##字符串的转换
+###valueOf
+静态方法valueOf可以将其他类型转换为字符串。它所支持的类型有：
+* char
+* char[]
+* double
+* float
+* int
+* long
+* boolean
+
+###逆向操作
+将字符串转换成其他类型。比如Double.parseDouble(str),将str转换成double类型。
+每种基本类型的包装类都有对应的静态`parse*`方法。
