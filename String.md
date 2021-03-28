@@ -25,7 +25,7 @@ s1 == s2 is false
 s1 == s3 is true
 ```
 ##连接
-可以用`+=`连接，也可以用contact方法连接。  
+可以用`+=`连接，也可以用conact方法连接。  
 注意：
 ```java
 i = 1;
@@ -38,4 +38,32 @@ System.out.println("i + j is "+(i+j));//输出结果为i + j is 3
 ###==
 ==只能比较两个字符串是不是指向同一个对象，它不会告诉你他们的内容是否相同。
 ###equals
+equals方法可以比较两个字符串的内容是否相同
+###compareTo
+compareTo方法返回的值是比较的两个字符串从左到右数第一个不同字符之间的距离（ascii码之差）。   
+String类型不能用>、>=、<、<=这样的比较运算符来比较两个字符串的字典序。
+##长度
+length方法
+##定位
+提取字符串中的某个特定字符用charAt方法。
+```java
+String s = "Hello World";
+char c = s.charAt(0);
+```
+charAt的参数是字符串元素的索引。该索引的值在0~s.length()-1之间。
+##获取子串
+使用substring方法。该方法的格式为：
+```java
+String substring(beginIndex )
+String substring(beginIndex , endIndex)
+```
+索引同样是从0开始算起。
+注意，实际获取到的子串是原字符串的索引beginIndex到endIndex-1位置的子串。  
+第一个substring的缺省endIndex就是字符串的长度，即截取到字符串结尾。  
+>注意，求子串的方法substring并不会对原字符串做出改变，它只是把子串作为返回值返回。
 
+##转换、替换、分割
+该部分功能的方法如：
+|返回值|方法名|参数|描述
+|-----|-----|----|----
+|String|replaceFirst|String oldStr,String newStr|返回一个用新子串替换第一个匹配子串的新串。
