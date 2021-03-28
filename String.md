@@ -64,6 +64,7 @@ String substring(beginIndex , endIndex)
 
 ##转换、替换、分割
 该部分功能的方法如：
+
 |返回值|方法名|参数|描述
 |-----|-----|----|----
 |String|replaceFirst|String oldStr,String newStr|返回一个用新子串替换第一个匹配子串的新串。
