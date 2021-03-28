@@ -116,3 +116,11 @@ replace的三个方法和split方法都支持真正表达式匹配串（分别�
 ###逆向操作
 将字符串转换成其他类型。比如Double.parseDouble(str),将str转换成double类型。
 每种基本类型的包装类都有对应的静态`parse*`方法。
+##格式化
+静态format方法。格式为：
+```java
+String.format(format,item1,item2,...itemk);
+//比如：
+String s = String.format("5.2f",45.556);
+```
+类似与printf方法，只不过printf方法将结果打印到屏幕，而format方法是作为返回值返回。
