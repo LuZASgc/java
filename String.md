@@ -45,12 +45,34 @@ String类型不能用>、>=、<、<=这样的比较运算符来比较两个字�
 ##长度
 length方法
 ##定位
-提取字符串中的某个特定字符用charAt方法。
+###charAt
+通过索引定位字符：提取字符串中的某个特定字符用charAt方法。
 ```java
 String s = "Hello World";
 char c = s.charAt(0);
 ```
 charAt的参数是字符串元素的索引。该索引的值在0~s.length()-1之间。
+###indexOf/lastIndexOf
+通过字符获得索引：indexOf是从左到右查找，lastIndexOf是从右到左查找
+String类提供了几个重载的方法：
+```java
+"Welcome to Java".indexOf('o')//返回4
+"Welcome to Java".indexOf('o',5)//返回9
+"Welcome to Java".indexOf("come")//返回3
+"Welcome to Java".indexOf("Java",5)//返回11
+"Welcome to Java".indexOf("java")//找不到返回-1
+
+"Welcome to Java".lastIndexOf('o')//返回9
+"Welcome to Java".lastIndexOf('o',5)//返回4
+"Welcome to Java".lastIndexOf("come")//返回3
+"Welcome to Java".lastIndexOf("Java")//返回11
+"Welcome to Java".lastIndexOf("Java",5)//返回-1
+```
+凡是找不到都会返回-1。  
+部分重载方法参数里面的整数，如：
+* indexOf('o',5)指的是从索引为5的位置之后（包括5）开始查找。
+* lastIndexOf('o',5)指的是从索引为5的位置之前（包括5）开始查找。
+
 ##获取子串
 使用substring方法。该方法的格式为：
 ```java
@@ -63,6 +85,7 @@ String substring(beginIndex , endIndex)
 >注意，求子串的方法substring并不会对原字符串做出改变，它只是把子串作为返回值返回。
 
 ##转换、替换、分割
+###普通做法
 该部分功能的方法如：
 
 |返回值|方法名|参数|描述
@@ -74,3 +97,8 @@ String substring(beginIndex , endIndex)
 |String|replaceFirst|String oldStr,String newStr|返回一个用新子串替换第一个匹配子串的新串
 |String|replaceAll|String oldStr,String newStr|返回一个用新子串替换所有匹配子串的新串
 |String[]|split|String delimiter|返回一个用定界符delimiter分割出来的字符串数组
+###模式匹配法
+####matches
+该方法的参数是一个支持正则表达式的字符串。
+####其他
+replace的三个方法和split方法都支持真正表达式匹配串（分别对应旧串和定界符串）。
