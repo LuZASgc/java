@@ -67,4 +67,10 @@ String substring(beginIndex , endIndex)
 
 |返回值|方法名|参数|描述
 |-----|-----|----|----
-|String|replaceFirst|String oldStr,String newStr|返回一个用新子串替换第一个匹配子串的新串。
+|String|toLowerCase||返回一个将所有字母转换成小写后到新字符串
+|String|toUpperCase||返回一个将所有字母转换成大写后到新字符串
+|String|trim||返回一个去掉首尾两端空白字符的新字符串
+|String|replace|char oldChar,char newChar|返回一个用新的字符替换所有匹配字符的新串
+|String|replaceFirst|String oldStr,String newStr|返回一个用新子串替换第一个匹配子串的新串
+|String|replaceAll|String oldStr,String newStr|返回一个用新子串替换所有匹配子串的新串
+|String[]|split|String delimiter|返回一个用定界符delimiter分割出来的字符串数组
