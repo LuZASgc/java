@@ -46,7 +46,7 @@ public class Max{
 比如：
 ```java
 public class ComparableReactangle extends Rectangel implements Comparable{
-...
+    ...
     public int compareTo(Object o){
         if(getArea()>((ComparableReactangle)o).getArea)
             return 1;
