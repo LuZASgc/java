@@ -41,3 +41,18 @@ public class Max{
     }
 }
 ```
+###类的接口实现
+所有实现了Comparable接口的类的实例化对象，都能通过>、<、=符号来比较大小
+比如：
+```java
+public class ComparableReactangle extends Rectangel implements Comparable{
+...
+    public int compareTo(Object o){
+        if(getArea()>((ComparableReactangle)o).getArea)
+            return 1;
+        else if(getArea()<((ComparableReactangle)o).getArea)
+            return -1;
+        else
+            return 0;
+    }
+}
